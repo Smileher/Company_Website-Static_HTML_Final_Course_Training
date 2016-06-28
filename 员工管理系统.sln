@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "员工管理系统", "员工管理系统\员工管理系统.csproj", "{220FD14C-8E72-4773-A7E9-34AC62B9DA6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{220FD14C-8E72-4773-A7E9-34AC62B9DA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{220FD14C-8E72-4773-A7E9-34AC62B9DA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{220FD14C-8E72-4773-A7E9-34AC62B9DA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{220FD14C-8E72-4773-A7E9-34AC62B9DA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
