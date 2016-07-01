@@ -71,6 +71,46 @@ namespace 员工管理系统
             Close();
         }
 
+        private void txtUserPwd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                button1_Click_1(null, null);
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                button2_Click(null, null);
+            }
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            txtUserName.Focus();// 使txtUserName获得焦点
+        }
+
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click_1(null, null);
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                button2_Click(null, null);
+            }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click_1(null, null);
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                button2_Click(null, null);
+            }
+        }
     }
 }
 
