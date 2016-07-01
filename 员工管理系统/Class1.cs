@@ -23,35 +23,32 @@ namespace 员工管理系统
             return ds;
         }
 
+        private const string BaseContent = "select 员工ID,所在部门ID,姓名,性别,出生日期,电话 from 员工信息表";
+
+        private static readonly Dictionary<string, string> Dic = new Dictionary<string, string>
+        {
+            {"公司员工管理系统", BaseContent },
+            {"营销中心", BaseContent + " where 所在部门ID=1001 or 所在部门ID=1002 or 所在部门ID=1003" },
+            {"管理中心", BaseContent + " where 所在部门ID=1004 or 所在部门ID=1005 or 所在部门ID=1006" },
+            {"采购部门", BaseContent + " where 所在部门ID=1001" },
+            {"销售部门", BaseContent + " where 所在部门ID=1002" },
+            {"售后部门", BaseContent + " where 所在部门ID=1003" },
+            {"人事部门", BaseContent + " where 所在部门ID=1004" },
+            {"财务部门", BaseContent + " where 所在部门ID=1005" },
+            {"经理", BaseContent + " where 所在部门ID=1006" }
+        };
+
         public DataSet FillData(string dept)
         {
-            if(dept== "公司员工管理系统")
-                cmd = new SqlCommand("select 员工ID,所在部门ID,姓名,性别,出生日期,电话 from 员工信息表", cn);
-        
-            if(dept== "营销中心")
-                cmd = new SqlCommand("select 员工ID,所在部门ID,姓名,性别,出生日期,电话 from 员工信息表 where 所在部门ID=1001 or 所在部门ID=1002 or 所在部门ID=1003", cn);
+            if (Dic.ContainsKey(dept))
+            {
+                cmd = new SqlCommand(Dic[dept], cn);
+            }
+            else
+            {
+                throw new ArgumentNullException("未找到参数");
+            }
 
-            if (dept == "管理中心")
-                cmd = new SqlCommand("select 员工ID,所在部门ID,姓名,性别,出生日期,电话 from 员工信息表 where 所在部门ID=1004 or 所在部门ID=1005 or 所在部门ID=1006", cn);
-
-            if (dept == "采购部门")
-                cmd = new SqlCommand("select 员工ID,所在部门ID,姓名,性别,出生日期,电话 from 员工信息表 where 所在部门ID=1001", cn);
-
-            if (dept == "销售部门")
-                cmd = new SqlCommand("select 员工ID,所在部门ID,姓名,性别,出生日期,电话 from 员工信息表 where 所在部门ID='1002'", cn);
-
-            if (dept == "售后部门")
-                cmd = new SqlCommand("select 员工ID,所在部门ID,姓名,性别,出生日期,电话 from 员工信息表 where 所在部门ID='1003'", cn);
-
-            if (dept == "人事部门")
-                cmd = new SqlCommand("select 员工ID,所在部门ID,姓名,性别,出生日期,电话 from 员工信息表 where 所在部门ID='1004'", cn);
-
-            if (dept == "财务部门")
-                cmd = new SqlCommand("select 员工ID,所在部门ID,姓名,性别,出生日期,电话 from 员工信息表 where 所在部门ID='1005'", cn);
-            
-            if (dept == "经理")
-                cmd = new SqlCommand("select 员工ID,所在部门ID,姓名,性别,出生日期,电话 from 员工信息表 where 所在部门ID='1006'", cn);
-            
             dat.SelectCommand = cmd;
             dat.Fill(ds, "员工信息表");
             return ds;
