@@ -155,7 +155,7 @@ namespace 员工管理系统
              SqlCommand cmd1 =
                 new SqlCommand(
                     "insert 员工信息表 (员工ID,所在部门ID,姓名,性别,出生日期,电话) values('" + textBox1.Text + "', '" + 
-                    textBox4.Text + "','" + textBox2.Text + "','" + textBox5.Text + "','" + textBox3.Text + "','" + 
+                    textBox4.Text + "','" + textBox2.Text + "','" +textBox5.Text + "','" + textBox3.Text + "','" + 
                     textBox6.Text + "')", cn);
              
                 cn.Open();
