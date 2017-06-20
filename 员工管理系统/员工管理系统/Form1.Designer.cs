@@ -44,7 +44,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 30);
             this.button1.TabIndex = 0;
-            this.button1.Text = "登陆(Enter)";
+            this.button1.Text = "登陆";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -56,7 +56,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 30);
             this.button2.TabIndex = 1;
-            this.button2.Text = "退出(Esc)";
+            this.button2.Text = "退出";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -69,7 +69,6 @@
             this.txtUserName.Size = new System.Drawing.Size(185, 25);
             this.txtUserName.TabIndex = 2;
             this.txtUserName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
             // 
             // txtUserPwd
             // 
@@ -80,7 +79,6 @@
             this.txtUserPwd.Size = new System.Drawing.Size(185, 25);
             this.txtUserPwd.TabIndex = 3;
             this.txtUserPwd.UseSystemPasswordChar = true;
-            this.txtUserPwd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserPwd_KeyDown);
             // 
             // label1
             // 
@@ -119,20 +117,19 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "登陆";
-            this.Activated += new System.EventHandler(this.Form1_Activated);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtUserPwd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.Button button2;
     }
 }
 

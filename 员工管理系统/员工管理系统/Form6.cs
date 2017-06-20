@@ -20,13 +20,5 @@ namespace 员工管理系统
         {
             System.Diagnostics.Process.Start("http://weibo.com/chenhe0131");
         }
-
-        private void Form6_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                Close();
-            }
-        }
     }
 }
