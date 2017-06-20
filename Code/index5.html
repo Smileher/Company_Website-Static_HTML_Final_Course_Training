@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>在线订购</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="dx">
+   <div class="Logo"><img src="images/logo.gif"/></div>
+   
+   <div id="mnue">
+     <ul class="li">
+       <li><a href="index.html">网站首页</a></li>
+       <li><a href="index1.html">公司概况</a></li>
+       <li><a href="index2.html">公司动态</a></li>
+       <li><a href="index3.html">产品介绍</a></li>
+       <li><a href="index4.html">办公系统</a></li>
+       <li><a href="index5.html">在线订购</a></li>
+       <li><a href="index6.html">招聘信息</a></li>
+       <li><a href="index7.html">联系我们</a></li>
+     </ul>
+   </div> 
+  <div>
+    <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="994" height="208">
+      <param name="movie" value="flash/dh.swf" />
+      <param name="quality" value="high" />
+      <param name="wmode" value="opaque" />
+      <param name="swfversion" value="6.0.65.0" />
+      <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
+      <param name="expressinstall" value="Scripts/expressInstall.swf" />
+      <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
+      <!--[if !IE]>-->
+      <object type="application/x-shockwave-flash" data="flash/dh.swf" width="994" height="208">
+        <!--<![endif]-->
+        <param name="quality" value="high" />
+        <param name="wmode" value="opaque" />
+        <param name="swfversion" value="6.0.65.0" />
+        <param name="expressinstall" value="Scripts/expressInstall.swf" />
+        <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
+        <div>
+          <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
+          <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" /></a></p>
+        </div>
+        <!--[if !IE]>-->
+      </object>
+      <!--<![endif]-->
+    </object>
+  </div>
+   
+   
+   <div id="zj">
+     <div id="product">
+     <div style="padding:5px" class="product"><img src="images/product.gif" width="756" height="50" /></div>
+       <ul>
+         <li>     
+             <div align="center">
+               <table width="100%" style="margin:8px;" border="0" cellspacing="0" cellpadding="0">
+                 <tr>
+                   <td height="25" colspan="2">系列：
+                     <select name="xl" id="xl">
+                       <option value="" selected>选择车辆系列</option>
+                       <option value="德龙系列">德龙系列</option>
+                       <option value="奥龙系列">奥龙系列</option>
+                       <option value="康明斯系列">康明斯系列</option>
+                       <option value="微型车系列">微型车系列</option>
+                   </select></td>
+                 </tr>
+                 <tr>
+                   <td height="25" colspan="2">类别：
+                     <select name="lb" id="lb">
+                       <option value="" selected="selected">选择车辆类别</option>
+                       <option value="牵引汽车">牵引汽车</option>
+                       <option  value="自卸汽车">自卸汽车</option>
+                       <option  value="载货汽车">载货汽车</option>
+                       <option  value="越野汽车">越野汽车</option>
+                       <option  value="专用汽车">专用汽车</option>
+                   </select></td>
+                 </tr>
+                 <tr>
+                   <td height="25" colspan="2">价格：
+                     <input name="p1" type="text" id="p1" size="5" class="cpbd1"/> 
+                     - 
+                     <input name="p2" type="text" id="p2" size="5" class="cpbd1"/> 
+                   元</td>
+                 </tr>
+                 <tr>
+                   <td height="25" colspan="2">名称：
+                   <input name="pname" type="text" id="pname" size="15" class="cpbd1" /></td>
+                 </tr>
+                 <tr style="padding:5px">
+                   <td height="25" colspan="2"><img src="images/smile/cpss_4.jpg" align="absmiddle" /></td>
+                 </tr>
+               </table>
+             </div> 
+         </li>
+         <li> 
+           <table width="100%" border="0" align="center" cellpadding="3" cellspacing="5">
+              <form action="ProductBuySave.Asp?MemberID=0" method="post" name="formBuy" id="formBuy">
+                
+                <tr>
+                  <td align="right">相关说明：<br /></td>
+                  <td><input type="hidden" name="Products" value="" />
+                    <textarea name="Remark" cols="40" rows="8" id="Remark"></textarea></td>
+                </tr>
+                <tr>
+                  <td align="right">联系人：</td>
+                  <td><input name="RealName" type="text" id="RealName" value="" size="20" maxlength="50" />
+                    <font color="red">*</font></td>
+                </tr>
+                <tr>
+                  <td align="right">性别：</td>
+                  <td><input name="Sex" type="radio" value="先生" class="inputnoborder" checked />
+                    先生
+                    <input type="radio" name="Sex" value="女士" class="inputnoborder"  />
+                    女士 <font color="red">*</font></td>
+                </tr>
+                <tr>
+                  <td align="right">单位名称：</td>
+                  <td><input name="Company" type="text" id="Company" value="" size="40" maxlength="100" />
+                    <font color="red">*</font></td>
+                </tr>
+                <tr>
+                  <td align="right">详细地址：</td>
+                  <td><input name="Address" type="text" id="Address" value="" size="40" maxlength="100" />
+                    <font color="red">*</font></td>
+                </tr>
+                <tr>
+                  <td align="right">邮政编码：</td>
+                  <td><input name="ZipCode" type="text" id="ZipCode" value="" size="20" maxlength="20" />
+                    <font color="red">*</font></td>
+                </tr>
+                <tr>
+                  <td align="right">联系电话：</td>
+                  <td><input name="Telephone" type="text" id="Telephone" value="" size="20" maxlength="50" />
+                    <font color="red">*</font></td>
+                </tr>
+                <tr>
+                  <td align="right">传真号码：</td>
+                  <td><input name="Fax" type="text" id="Fax" value="" size="20" maxlength="50" /></td>
+                </tr>
+                <tr>
+                  <td align="right">手机号码：</td>
+                  <td><input name="Mobile" type="text" id="Mobile" value="" size="20" maxlength="50" />
+                    <font color="red">*</font></td>
+                </tr>
+                <tr>
+                  <td align="right">电子信箱：</td>
+                  <td><input name="Email" type="text" id="Email" value="" size="30" maxlength="50" />
+                    <font color="red">*</font></td>
+                </tr>
+                <tr> </tr>
+                <tr>
+                  <td align="right">&nbsp;</td>
+                  <td><input  type="submit" value="立即订购以上产品" /></td>
+                </tr>
+              </form>
+            </table>
+           </li>
+
+         
+         <p><td width="45%" align="left"><br /></td>
+      </tr><tr>
+      <td width="362" align="center">
+      <br /></td>
+      
+      <td width="362" align="center">
+      <br /></td>
+      </tr><tr>
+      <td width="362" align="center">
+      <br /></td>
+      
+      <td width="362" align="center">
+      <br /></td>
+      </tr><tr>
+      <td width="362" align="center">
+      <br /></td>
+      
+      <td width="362" align="center"><br /></td>
+      </tr><tr>
+      <td width="362" align="center">
+      <br /></td>
+      
+      <td width="362" align="center">
+      <br /></td>
+      </tr>
+</p>
+         </ul>
+     </div>   
+          
+          
+          
+          
+          
+  <div id="content">
+        <div><img src="images/left_nav.gif" width="235" /></div>
+        <ul class="content">
+          <li><a href="#"><img src="images/list.jpg" />疏通吸污车（联合）系列</a></li>
+          <li><a href="#"><img src="images/list.jpg" />罐式车系列</a></li>
+          <li><a href="#"><img src="images/list.jpg" />粉粒物料运输车系列</a></li>
+          <li><a href="#"><img src="images/list.jpg" />铵油炸药现场混装车系列</a></li>
+          <li><a href="#"><img src="images/list.jpg" />垃圾压缩车系列</a></li>
+          <li><a href="#"><img src="images/list.jpg" />自卸车系列</a></li>
+          <li><a href="#"><img src="images/list.jpg" />集装箱运输车系列 </a></li>
+          <li><a href="#"><img src="images/list.jpg" />厢式车系列</a></li>
+          <li><a href="#"><img src="images/list.jpg" />低平板半挂车 </a></li>
+          <li><a href="#"><img src="images/list.jpg" />栏板半挂车</a></li>
+        </ul>
+        <div><img src="images/contract.gif" width="235" /></div>
+    </div>
+ 
+  </div>
+   
+   
+   
+    <div class="background"><img src="images/nav_bj4 (3).png" width="995" /></div>
+  
+  <div id="banquan">
+       <div><img src="images/logo_bottom.jpg" /></div>
+       <div class="banquan">
+          <p>
+          版权所有@ 淮安市专用汽车制造有限公司 @Smile贺　　后台管理<br />
+    公司地址：江苏省淮安市和平东路 10 号　苏ICP备08021116号<br />　邮编：223001 邮箱:8888@sohu.com<br />
+    李 经 理：13500000000 销售电话:0517-88888888 88888888 传 真：0517-88888888 服务电话：0517-88888888<br />
+    Semi Trailer 　|　Tanker Semi Trailer　 |　Vacuum Truck 　|　 Container Semi Trailer 　|   Tipping Semi Trailer<br /></p>
+        <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=1000 height=86 src="http://music.163.com/outchain/player?type=2&id=441722&auto=1&height=66"></iframe> </p>
+       </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+</script>
+</body>
+</html>
